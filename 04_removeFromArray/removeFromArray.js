@@ -1,9 +1,10 @@
 const removeFromArray = function (inputArray, ...toBeRemoved) {
-
-    function filtering(iterator) {
-        return toBeRemoved.indexOf(iterator) == -1;
+    function ifPresentInInput(iterator) {
+        return toBeRemoved.indexOf(iterator) === -1; // Keep only items NOT in toBeRemoved
     }
-    return inputArray.filter(filtering);
+
+    return inputArray.filter(ifPresentInInput);
+
 };
 
 // Do not edit below this line
